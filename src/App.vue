@@ -1,22 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <span v-text="message"></span>
+    <a v-bind:style="styleObject">検索エンジン</a>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data(){
     return{
-      message: 'hello'
+      styleObject: {
+        fontSize: '12px',
+        color: 'red'
+      }
     }
   }
 }
