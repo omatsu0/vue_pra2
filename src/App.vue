@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a v-bind:style="styleObject">検索エンジン</a>
+    <a v-bind:class="{active: false}">検索エンジン</a>
   </div>
 </template>
 
@@ -9,17 +9,17 @@
 export default {
   name: 'App',
   data(){
-    return{
-      styleObject: {
-        fontSize: '12px',
-        color: 'red'
-      }
-    }
+    // return{
+    //   styleObject: {
+    //     fontSize: '12px',
+    //     color: 'red'
+    //   }
+    // }
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,5 +27,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.active{
+  color: #fff;
+  background-color: red;
 }
 </style>
