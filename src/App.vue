@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a v-bind:class="{active: false}">検索エンジン</a>
+    <a v-bind:class="{active: isActive,error:hasError}">検索エンジン</a>
   </div>
 </template>
 
@@ -9,12 +9,10 @@
 export default {
   name: 'App',
   data(){
-    // return{
-    //   styleObject: {
-    //     fontSize: '12px',
-    //     color: 'red'
-    //   }
-    // }
+    return{
+      isActive: true,
+      hasError:false
+    }
   }
 }
 </script>
