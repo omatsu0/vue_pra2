@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <a v-bind:class="{active: isActive,error:hasError}">検索エンジン</a>
+    <p v-if="stock_number > 0">販売中です</p>
+    <p v-else>在庫切れのため販売していません</p>
   </div>
 </template>
 
@@ -10,8 +11,7 @@ export default {
   name: 'App',
   data(){
     return{
-      isActive: true,
-      hasError:false
+      stock_number: 1
     }
   }
 }
